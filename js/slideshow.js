@@ -38,3 +38,15 @@ const next = () => {
 
 document.querySelector('#previous').addEventListener('click', previous);
 document.querySelector('#next').addEventListener('click', next);
+
+
+//Nova função: passar slides com as setas 
+document.addEventListener ('keydown', (e) => {
+    if(e.key === 'ArrowLeft'){
+        console.log('Apertou seta da esquerda')
+        previous()
+    }else if(e.key === 'ArrowRight'){
+        console.log('Apertou seta da direita')
+        next()
+    }
+})
